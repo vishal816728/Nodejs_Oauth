@@ -1,0 +1,29 @@
+<h4>DashBoard hbs</h4>
+<p>Welcome {{name}}</p>
+<p>Here are your Books</p>
+
+{{#if stories}}
+      <table class="striped">
+           <thead>
+               <tr>
+                   <th>Title</th>
+                   <th>Date</th>
+                   <th>Status</th>
+                   <th></th>
+               </tr>
+           </thead>
+           <tbody>
+               {{!-- looping through eachnstories --}}
+               {{#each stories}}
+                <tr>
+                    <td><a href="/stories/{{_id}}" >{{title}}</a></td>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    <td></td>
+                </tr>
+                {{/each}}
+           </tbody>
+      </table>
+{{else}}
+     <p>You Have not created any stories yet</p>
+{{/if}}

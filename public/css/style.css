@@ -1,0 +1,14 @@
+p{
+    margin: 10px 0px !important;
+}
+.container-login{
+    width: 400px;
+    margin-top: 59px;
+    text-align: center;
+}
+
+.updatebtn a{
+    padding: 3px;
+    color: black;
+    margin-left: 8rem;
+}
